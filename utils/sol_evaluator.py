@@ -140,8 +140,8 @@ if __name__ == "__main__":
                 print(f"WARNING: the exam {ID_exam} has been scheduled twice!", file=stderr)
             timeslot_of_exam[ID_exam] = t
             exams_at_timeslot[t].append(ID_exam)
-        print(f"{timeslot_of_exam=}", file=stderr)
-        print(f"{exams_at_timeslot=}", file=stderr)
+        print(f"timeslot_of_exam={timeslot_of_exam[1:]}", file=stderr)
+        print(f"exams_at_timeslot={exams_at_timeslot[1:]}", file=stderr)
     # END: READING THE CONTENT OF THE REQUIRED FILES
     
     # BEGIN OF THE SMALL LOGIC SECTION:
