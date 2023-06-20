@@ -95,3 +95,5 @@ print(f"{opt_set_cover=}", file=stderr)
 print(f"{check_feasible(opt_set_cover)=}")
 print(f"{cost(opt_set_cover)=}")
 
+assert cost(opt_set_cover) == m.ObjVal
+assert check_feasible(opt_set_cover)
