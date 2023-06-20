@@ -79,12 +79,12 @@ m.optimize()
 #for v in m.getVars():
 #    print(f"{v.VarName} = {v.X}")
 
-assert m.Status == GRB.OPTIMAL
+#assert m.Status == GRB.OPTIMAL
 if m.Status == GRB.INFEASIBLE:
     m.computeIIS()
     in_the_minimal_bad = [ c for c in m.getConstrs() if c == 1 ] 
     print(f"{in_the_minimal_bad=}")
-
+    exit(0)
 
 
 print(f"{type(x)=}, {x=}")
