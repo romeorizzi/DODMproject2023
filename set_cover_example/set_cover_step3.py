@@ -9,8 +9,6 @@ from gurobipy import GRB
 def to_bool(x):
     if x > 1/2:
         return True
-    if x < -1/2:
-        return True
     return False
 
 """
@@ -37,7 +35,14 @@ ele_covered_by = [
 ]
 
 def check_feasible(solution):
-    pass
+    for v in V:
+        covered = False
+        for s in solution:
+            if v in ele_covered_by[s]:
+                covered = True
+        if not covered:
+            return False
+    return True
 
 def cost(solution):
     return len(solution)

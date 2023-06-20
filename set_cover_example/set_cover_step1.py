@@ -27,16 +27,18 @@ ele_covered_by = [
 ]
 
 
-if __name__ == "__main__":
-    # BEGIN OF THE SMALL LOGIC SECTION:
-    V = list(range(n)) # list containing the names of the nodes (elements of the groundset to be covered) 
-    S = list(range(m)) # list containing the names of the sets available
+V = list(range(n)) # list containing the names of the nodes (elements of the groundset to be covered) 
+S = list(range(m)) # list containing the names of the sets available
 
-    # Create optimization model:
-    m = gp.Model('set_cover')
+# Create optimization model:
+m = gp.Model('set_cover')
 
-    # Create variables:
-    x = m.addVars( S, vtype=GRB.BINARY, name="x")
-    # x[s] = 1 if the set s is selected, otherwise x[s] = 0 
+# Create variables:
+x = m.addVars( S, vtype=GRB.BINARY, name="x")
+# x[s] = 1 if the set s is selected, otherwise x[s] = 0 
 
-    # Now we should define the constraints ...
+# Now we should define the constraints ...
+
+    # every element must be contained in at least one of the selected sets
+    # I find it slightly difficult to express this:
+    # sum(x_s : s in S such that s contains v)  >= 1   for every v in V           
