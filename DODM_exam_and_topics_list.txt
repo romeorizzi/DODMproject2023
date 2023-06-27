@@ -1,0 +1,96 @@
+# EXAM - grade production for Discrete Optimization and Decision Management
+Roberto Zanotti and Romeo Rizzi, AY 2022-23
+
+The exam consists of two separate moments:
+
+ + PROJECT, with mark produced at the time of the final discussion
+ + INDIVIDUAL ORAL, with mark produced at the time of the oral
+
+the exam grade will be the arithmetic mean rounded up, where a 30L is counted as 32, and to obtain 30L as final mark you need at least a 30L and both grades must be at least 30.
+
+These two moments can take place in any order.
+
+
+## PROJECT 
+
+It requires tackling a problem (fully defined by the teachers) in order to:
+
+1. write a formulation in terms of ILP
+2. insert it into Guroby
+3. resolve a benchmark of instances (of various sizes, the small ones will facilitate your testing) made available to you
+
+The project can be tackled by groups of k people, 1<=k<=4. The free constitution of the groups is left to you.
+The project concludes with a discussion held online by the whole group and immediately followed by k individual project-orals meant to verify that everyone is well into the project (with specific questions, or clarifications, or of the type "what if").
+The project-grade will be the same for all k members of the group, but will be obtained as the average of the oral-project grades taken over the k students. This mark does not expire and cannot even be increased by retaking this part of the exam.
+The dates/times of the meetings (online) in which to carry out the project discussion will be agreed with the students of the group.
+
+
+## INDIVIDUAL ORAL
+
+At a different time than that of the discussion of the project and k subsequent project-orals, each student will take her general oral aimed at demonstrating that she has adequately acquired the skills listed in the list of topics.
+The dates/times of the general oral exam will be agreed with the individual student.
+
+Skills to be exhibited in the general oral exam:
+    1. knowledge of the theorems discussed (at least their statements)
+    2. knowledge of some notable models
+    3. ability to reason with examples and counterexamples
+    4. being able to provide examples and classes of exact, approximate and metaheuristic algorithms
+    5. mastery of the language of the LP and of the ILP
+    6. ability to model a problem on an abstract level
+    7. knowledge of the topics in the following list
+
+
+## LIST OF TOPICS
+
+### Basic notions of Algorithms and Complexity
+    realistic operator/executor, algorithm=recipe/instructions for an operator, correctness and termination requirements
+    mathematical programming: instances and problems=models
+    computation time, worst case criterion, asymptotic upper bound
+    complexity, polynomial versus exponential, P, NP and co-NP.
+    SAT, statement of Cook's theorem, reduction from SAT to PLI
+
+
+### Linear Programming (reference: Vanderbei chapters 2,3,4,5, but no need to read the proof concerning Bland's rule)
+
+linear systems and Gauss algorithm
+expression in matrix form of linear systems and early notions of linear algebra (linear combinations, linear independence, invertible matrices, determinant, Kramer's formula)
+total unimodular matrices and integrality of polyhedra (for a compact writing: https://theory.stanford.edu/~jvondrak/MATH233B-2017/lec3.pdf or, for a lengthy video: https://www.youtube.com/watch?v=sKljREy6PFY)
+two classes of totally unimodular matrices:
+  incidence matrices of bipartite graphs (for proof of this and Koenig's theorem see the compact writing above or the one below this video: https://www.youtube.com/watch?v=uixM9GLvN6k)
+  incidence matrices of directed graphs (very to the point compact writing https://www.math.unipd.it/~luigi/courses/metmodoc1617/m07.assTum.en.pdf)
+
+the language of linear programming
+lines, planes, hyperplanes, gradient, convexity, polyhedral cones, polyhedra, polytopes, feasible region, void, bounded, unbounded, double representation of vertices and faces
+double representation of polyhedron = polytope + cone (https://scaron.info/blog/polyhedra-and-polytopes.html)
+graphic solution of a linear programming problem in two variables (https://www.youtube.com/watch?v=gbL3vYq3cPk)
+standard form of max maximization c'x Ax <= b, x >= 0
+discover together that it can always be reduced to a standard form
+canonical form of max maximization c'x Ax = b, x >= 0
+basic solution
+distinction between the vertex as a point in Rn and the basic solution understood as a writing which identifies it but is not always unique
+simplex algorithm
+two-phases simplex algorithm (https://www.youtube.com/watch?v=_wnqe5_CLU0)
+duality theory:
+dual problem, statements of the theorems of weak duality, strong duality, and complementary slacks.
+know how to model a problem with PL or ILP
+with the PL we managed:
+maximum flow and minimum cut, for bipartite graphs: minimum node-cover, maximum matching and perfect matching of maximum value
+with PLI we managed:
+TSP, maximum matching in generic graphs
+cutting planes - generic Gomory cuts (https://www.youtube.com/watch?v=1i0rKtH_YPs)
+
+## Exact Algorithms
+   simple enumeration algorithms
+   implicit enumeration algorithms
+   branch & bound
+   branch & cut, with generic cuts (Gomory cuts) or based on families of problem-specific cuts (subcircuit elmination inequalities)
+   
+## Approximation Algorithms
+   for the minimum node cover problem
+   for the TSP
+
+## Meta-Heuristics
+  generative heuristics and refinement heuristics
+  greedy (examples: change and coins), local search (examples: 2-opt for the TSP), simulated annealing, tabu search, genetic algorithms
+
+
